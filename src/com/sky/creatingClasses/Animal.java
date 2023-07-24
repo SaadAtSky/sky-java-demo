@@ -6,6 +6,15 @@ public class Animal {
     private int age;
     private double satiety;
 
+    public Animal(){
+
+    }
+    public Animal(int height, int age, int satiety){
+        this.height = height;
+        this.age = age;
+        this.satiety = satiety;
+    }
+
     public int getHeight() {
         return height;
     }
