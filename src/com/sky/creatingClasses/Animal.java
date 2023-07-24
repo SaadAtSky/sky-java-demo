@@ -14,11 +14,30 @@ public class Animal {
         this.location.showContinent();
     }
 
-    public Animal(){}
+
+
     public Animal(int height, int age, int satiety){
         this.height = height;
         this.age = age;
         this.satiety = satiety;
+    }
+//    public Animal(int height, int age){
+//        this(height,age,40);
+//    }
+//    public Animal(int height){
+//        this(height,10,40);
+//    }
+//    public Animal(){
+//        this(10,10,40);
+//    }
+public Animal(int height, int age){
+    this(height,age,40);
+}
+    public Animal(int height){
+        this(height,10);
+    }
+    public Animal(){
+        this(10);
     }
 
     public int getHeight() {

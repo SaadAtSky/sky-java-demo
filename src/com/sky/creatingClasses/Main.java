@@ -5,5 +5,9 @@ public class Main {
         Animal frog = new Frog(30);
         frog.setLocation(new WorldLocation(20,5));
         frog.getLocation();
+
+        // abstraction
+
+        // method overriding
     }
 }
