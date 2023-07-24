@@ -5,10 +5,16 @@ public class Animal {
     private int height;
     private int age;
     private double satiety;
+    private WorldLocation location;
 
-    public Animal(){
-
+    public void setLocation(WorldLocation location) {
+        this.location = location;
     }
+    public void getLocation(){
+        this.location.showContinent();
+    }
+
+    public Animal(){}
     public Animal(int height, int age, int satiety){
         this.height = height;
         this.age = age;
