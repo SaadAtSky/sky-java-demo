@@ -4,6 +4,15 @@ public abstract class Vehicle {
     private int topSpeed;
     private int passengerCapacity;
     private String direction;
+    private int cost;
+
+    public int getCost() {
+        return cost;
+    }
+
+    public void setCost(int cost) {
+        this.cost = cost;
+    }
 
     public int getMileage() {
         return mileage;
