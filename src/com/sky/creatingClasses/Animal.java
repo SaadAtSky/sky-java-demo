@@ -1,6 +1,6 @@
 package com.sky.creatingClasses;
 
-public class Animal {
+public abstract class Animal {
     private int weight;
     private int height;
     private int age;
@@ -14,12 +14,15 @@ public class Animal {
         this.location.showContinent();
     }
 
-
-
-    public Animal(int height, int age, int satiety){
+    public Animal(int weight, int height, int age, double satiety) {
+        this.weight = weight;
         this.height = height;
         this.age = age;
         this.satiety = satiety;
+    }
+
+    public Animal(int height, int age, int satiety){
+        this(height,age,satiety,70);
     }
 //    public Animal(int height, int age){
 //        this(height,age,40);
@@ -79,8 +82,14 @@ public Animal(int height, int age){
 
     @Override
     public String toString() {
-        return "Animal [age = "+this.getAge()+", height = "+this.getHeight()+", weight = "+this.getHeight()+", satiety = "+this.getSatiety()+"]";
+        return "Animal [age = "+this.getAge()+", height = "+this.getHeight()+", weight = "+this.getWeight()+", satiety = "+this.getSatiety()+"]";
     }
+
+
+//    @Override
+//    public String toString() {
+//        return super.toString();
+//    }
 
     @Override
     public boolean equals(Object o) {
