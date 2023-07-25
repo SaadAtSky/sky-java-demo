@@ -1,22 +1,44 @@
 package com.sky.OOP;
-
 public abstract class Vehicle {
     private int mileage;
-    private int speed;
+    private int topSpeed;
     private int passengerCapacity;
-    private String brand;
     private String direction;
 
-    public void drive(){
-        System.out.println("Drive");
+    public int getMileage() {
+        return mileage;
     }
-    public void halt(){
-        System.out.println("halting");
+
+    public void setMileage(int mileage) {
+        this.mileage = mileage;
     }
+
+    public int getTopSpeed() {
+        return topSpeed;
+    }
+
+    public void setTopSpeed(int topSpeed) {
+        this.topSpeed = topSpeed;
+    }
+
+    public int getPassengerCapacity() {
+        return passengerCapacity;
+    }
+
+    public void setPassengerCapacity(int passengerCapacity) {
+        this.passengerCapacity = passengerCapacity;
+    }
+
+    public String getDirection() {
+        return direction;
+    }
+
+    public void setDirection(String direction) {
+        this.direction = direction;
+    }
+
     public void turn(String turnDirection){
         System.out.println("turning");
         direction = turnDirection;
-        }
     }
-
 }
