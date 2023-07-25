@@ -28,4 +28,12 @@ public class intDoubleDictionary implements Dictionary<Integer,Double> {
             System.out.println(v);
         }
     }
+    @Override
+    public String toString() {
+        String returnString = "";
+        for(int i = 0; i < keys.size();i++){
+            returnString += "{"+keys.get(i)+", "+values.get(i)+"}\n";
+        }
+        return returnString;
+    }
 }
