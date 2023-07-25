@@ -6,15 +6,20 @@ public class Main {
         Vehicle AirBus = new Airbus("Kuwait",100,500,100,10_000);
         Vehicle Titanic = new Titanic("White Star Line",100,150,300,5_000);
         Garage backyard = new Garage();
-        System.out.println("before storage: " + backyard.getEmptySlots());
+        System.out.println("before storage: ");
+        backyard.showGarage();
         backyard.storeVehicle(ferrariRoma);
+        backyard.storeVehicle(ferrariRoma);
+        backyard.storeVehicle(ferrariRoma);
+//        backyard.storeVehicle(Titanic);
+//        backyard.storeVehicle(Titanic);
+//        backyard.storeVehicle(Titanic);
         backyard.storeVehicle(AirBus);
-        backyard.storeVehicle(Titanic);
-        backyard.storeVehicle(ferrariRoma);
-        backyard.storeVehicle(Titanic);
-        backyard.storeVehicle(Titanic);
-        System.out.println("After storage: " + backyard.getEmptySlots());
-        System.out.println("Total cost: " + backyard.getTotalCost());
+        backyard.storeVehicle(AirBus);
+        backyard.storeVehicle(AirBus);
+        System.out.println("After storage: ");
+        backyard.showGarage();
+        System.out.println("Total cost: " + backyard.totalCost());
 
     }
 }
