@@ -26,7 +26,7 @@ public class Person {
                 String enteredName = sc.nextLine();
 
                 System.out.println("Choose the correct option for profession: \n1) Software Dev \n2) SRE \n3) DevOps Engineer");
-                Profession professionEntered;
+                Profession professionEntered = null;
                 int option = sc.nextInt();
                 switch (option){
                     case 1:
@@ -52,14 +52,21 @@ public class Person {
                 System.out.println("Don't really know");
             }
             finally {
-                System.out.println("Thank you for your time. Here are your entered details \n {age: "+age+", name: "+name+",profession: "+profession+"}");
+                //System.out.println("Thank you for your time. Here are your entered details \n {age: "+age+", name: "+name+",profession: "+profession+"}");
             }
         }
+        return null;
 
     }
 
     @Override
     public String toString() {
         return String.format("age: %d, name: %s, profession: "+profession,age,name,profession);
+    }
+
+    public static void main(String[] args) {
+        Person testperson = Person.personForm();
+        System.out.println(testperson);
+
     }
 }
