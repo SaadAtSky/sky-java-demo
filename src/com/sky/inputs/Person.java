@@ -13,7 +13,7 @@ public class Person {
         Scanner sc = new Scanner(System.in);
         try{
             System.out.println("Enter you age");
-            age = sc.nextInt()/0;
+            age = sc.nextInt();
             sc.nextLine();
 
             System.out.println("Enter you name");
