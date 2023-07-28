@@ -41,6 +41,7 @@ public class Board {
         int[] move = new int[2];
         do{
             try{
+                System.out.println(p.getName()+"'s turn");
                 System.out.println("Enter a valid move - 'row-enter-column-enter' ");
                 move[0] = sc.nextInt();
                 move[1] = sc.nextInt();

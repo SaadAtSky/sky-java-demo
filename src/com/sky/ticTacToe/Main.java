@@ -40,7 +40,10 @@ public class Main {
                     p1.incrementWins();
                     break;
                 }
-                if(ticTacToe.boardFull())break;
+                if(ticTacToe.boardFull()){
+                    System.out.println("Its a Draw!");
+                    break;
+                }
 
                 // Player 2
                 ticTacToe.displayBoard();
@@ -49,7 +52,10 @@ public class Main {
                     p2.incrementWins();
                     break;
                 }
-                if(ticTacToe.boardFull())System.out.println("Its a Draw!");
+                if(ticTacToe.boardFull()){
+                    System.out.println("Its a Draw!");
+                    break;
+                }
             }
             Thread.sleep(2000);
             System.out.println("Press Q to end the game");
