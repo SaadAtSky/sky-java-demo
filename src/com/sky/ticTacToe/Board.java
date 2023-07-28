@@ -1,6 +1,6 @@
 package com.sky.ticTacToe;
 
-import java.util.Scanner;
+import java.util.*;
 
 public class Board {
     final int rows = 3;
@@ -33,6 +33,10 @@ public class Board {
         }
     }
     public void move(Player p){
+        if(p.getName().equals("CPU")){
+            this.cpuMove(p);
+            return;
+        }
         Scanner sc = new Scanner(System.in);
         int[] move = new int[2];
         do{
@@ -45,6 +49,24 @@ public class Board {
             }
         }while (!checkValidMove(move));
         positions[move[0]][move[1]] = p.getSymbol();
+    }
+    public void cpuMove(Player p){
+        Random rand = new Random();
+        List<int[]> moves = new ArrayList<>();
+        for(int i = 0;i < cols;i++){
+            for(int j = 0;j < rows;j++){
+                if(positions[i][j].equals("-"))moves.add(new int[]{i,j});
+            }
+        }
+        int cpuNum = rand.nextInt(moves.size());
+        positions[moves.get(cpuNum)[0]][moves.get(cpuNum)[1]] = p.getSymbol();
+        System.out.println("CPU is thinking ...");
+        try {
+            Thread.sleep(3000);
+        }
+        catch (Exception e){
+
+        }
     }
     public boolean checkValidMove(int[] move){
         if(positions[move[0]][move[1]].equals("-"))return true;
