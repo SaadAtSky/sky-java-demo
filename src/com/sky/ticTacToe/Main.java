@@ -22,11 +22,11 @@ public class Main {
         symbol = sc.nextLine();
         Player p2 = new Player(name,symbol);
 
-        while(!ticTacToe.boardFull() || !ticTacToe.isWin()){
+        while(!ticTacToe.boardFull()){
             // Player 1
             ticTacToe.displayBoard();
             ticTacToe.move(p1);
-            if(ticTacToe.isWin()){
+            if(ticTacToe.checkWinner(p1)){
                 p1.incrementWins();
                 break;
             }
@@ -35,7 +35,7 @@ public class Main {
             // Player 2
             ticTacToe.displayBoard();
             ticTacToe.move(p2);
-            if(ticTacToe.isWin()){
+            if(ticTacToe.checkWinner(p2)){
                 p2.incrementWins();
                 break;
             }

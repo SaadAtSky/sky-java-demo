@@ -58,7 +58,17 @@ public class Board {
         }
         return true;
     }
-    public boolean isWin() {
-        return win;
+    public boolean checkWinner(Player p){
+        // win cases top, bottom, right, left, left Diag, right Diag
+        int[][][] winCases = {{{0,0},{0,1},{0,2}},{{2,0},{2,1},{2,2}},{{0,2},{1,2},{2,2}},{{0,0},{1,0},{2,0}},{{0,0},{1,1},{2,2}},{{2,2},{1,1},{2,0}}};
+        for(int[][] winCase : winCases){
+            if(positions[winCase[0][0]][winCase[0][1]].equals(p.getSymbol()) && positions[winCase[1][0]][winCase[1][1]].equals(p.getSymbol()) && positions[winCase[2][0]][winCase[2][1]].equals(p.getSymbol()))
+            {
+                this.displayBoard();
+                System.out.println(p.getName() + " Wins");
+                return true;
+            }
+        }
+        return false;
     }
 }
